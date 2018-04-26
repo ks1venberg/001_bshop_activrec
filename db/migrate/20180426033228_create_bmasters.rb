@@ -1,9 +1,9 @@
-class CreateBarbers < ActiveRecord::Migration[5.2]
+class CreateBmasters < ActiveRecord::Migration[5.2]
   def change
 
   	  	create_table :barbers do |t|
-  			t.text :name
-  			t.timestamps
+  		t.text :name
+  		t.timestamps
  		end
 
   		Barber.create :name => 'Jessie Pinkman'
