@@ -43,3 +43,19 @@ post '/visit' do
 
 	erb "<h2>Спасибо, вы записались!</h2>"
 end
+
+get '/contacts' do
+	erb :newcont
+end
+
+post '/contacts' do
+
+	@username = params[:username]
+	@phone = params[:phone]
+
+	Contact.create(
+	:name => "#{@username}",
+	:phone => "#{@phone}")
+
+	@message = 'Спасибо, в течение 5 минут мы свяжемся с вами'
+end
