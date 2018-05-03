@@ -12,6 +12,9 @@ end
 class Barber < ActiveRecord::Base
 end
 
+class Contact < ActiveRecord::Base
+end
+
 before do
 	@barbers = Barber.all
 end
@@ -58,4 +61,6 @@ post '/contacts' do
 	:phone => "#{@phone}")
 
 	@message = 'Спасибо, в течение 5 минут мы свяжемся с вами'
+
+	erb :newcont
 end
